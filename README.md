@@ -253,7 +253,7 @@ yarn global add open-codex
 
 ```bash
 # Clone the repository and navigate to the CLI package
-git clone https://github.com/ymichael/open-codex.git
+git clone https://github.com/AcidicSoil/open-codex.git
 cd open-codex/codex-cli
 
 # Install dependencies and build
