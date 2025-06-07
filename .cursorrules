@@ -1,0 +1,79 @@
+# Open Codex CLI Project Rules
+
+## ✅ COMPLETED: Open Codex CLI Setup and Configuration
+
+### Task Overview
+Successfully set up and configured the Open Codex CLI project for immediate use and future development operations.
+
+### Completed Steps:
+[X] Verified Node.js version compatibility (v22.16.0 ✅)
+[X] Built the codex-cli package from source
+[X] Linked CLI globally with `npm link`
+[X] Created persistent configuration directory (~/.codex/)
+[X] Generated default configuration file (config.json)
+[X] Created customizable global instructions (instructions.md)
+[X] Set up environment variable placeholders in ~/.bashrc
+[X] Created .env template for project-specific configuration
+[X] Built automated setup script (setup.sh) with full validation
+[X] Created comprehensive Quick Start Guide (QUICKSTART.md)
+[X] Verified CLI installation and functionality
+[X] Ensured all settings persist across sessions
+
+### Key Files Created:
+- `~/.codex/config.json` - Global CLI configuration
+- `~/.codex/instructions.md` - Global AI instructions
+- `.env.template` - Environment variables template
+- `.env.example` - Example environment file
+- `setup.sh` - Automated setup script
+- `QUICKSTART.md` - User quick start guide
+- Updated `~/.bashrc` with API key placeholders
+
+### Ready for Use:
+✅ CLI command `open-codex` is available globally
+✅ Configuration persists across shell sessions
+✅ Multiple AI providers supported (OpenAI, Gemini, OpenRouter, xAI, Ollama)
+✅ Setup script automates future installations
+✅ User documentation provides clear guidance
+
+### Next User Actions Needed:
+1. Add API key to environment variables or .env file
+2. Customize ~/.codex/instructions.md if desired
+3. Start using with: `open-codex "your prompt here"`
+
+## Lessons Learned
+
+### Project Structure
+- This is a fork of OpenAI's original Codex CLI with expanded provider support
+- Main CLI code is in `/codex-cli/` subdirectory
+- Uses TypeScript that compiles to `/dist/`
+- Requires Node.js 22+ (verified with current v22.16.0)
+
+### Setup Best Practices
+- Always use `npm link` for local development
+- Create configuration templates for different deployment scenarios
+- Provide both global (~/.codex/) and project-specific (.env) configuration
+- Include automated setup scripts for reproducible installations
+- Add comprehensive documentation for quick onboarding
+
+### Configuration Persistence
+- Environment variables in shell profiles (~/.bashrc, ~/.zshrc)
+- Global config in ~/.codex/ directory
+- Project-specific config via .env files
+- CLI supports multiple providers with different API key requirements
+
+## Development Notes
+
+### Build Process
+```bash
+cd codex-cli
+npm install
+npm run build
+npm link
+```
+
+### Supported Providers
+- openai (default) - requires OPENAI_API_KEY
+- gemini - requires GOOGLE_GENERATIVE_AI_API_KEY
+- openrouter - requires OPENROUTER_API_KEY
+- xai - requires XAI_API_KEY
+- ollama - no API key needed (local)
